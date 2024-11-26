@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+    rpg:
+        build: ./.docker/php
+        volumes:
+            - ./:/var/www
+        depends_on:
+            - rpg-mysql
+        networks:
+            - rpgnet
+
+    rpg-nginx:
+        build: ./.docker/nginx
+        restart: always
+        ports:
+            - "5401:80"
+        volumes:
+            - "./:/var/www"
+        depends_on:
+            - rpg
+        networks:
+            - rpgnet
+
+    rpg-mysql:
+        image: mysql:5.7.22
+        platform: linux/amd64
+        command: --innodb-use-native-aio=0
+        restart: always
+        ports:
+            - "5402:3306"
+        volumes:
+            - "./.docker/dbdata:/var/lib/mysql"
+        environment:
+            MYSQL_DATABASE: db_rpg
+            MYSQL_ROOT_PASSWORD: root
+        networks:
+            - rpgnet
+
+networks:
+    rpgnet:
+        driver: bridge
