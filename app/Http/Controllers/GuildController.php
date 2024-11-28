@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Player;
-use App\Http\Requests\StorePlayerRequest;
-use App\Http\Requests\UpdatePlayerRequest;
-use App\Repositories\PlayerRepositoryInterface;
+use App\Models\Guild;
+use App\Http\Requests\StoreGuildRequest;
+use App\Http\Requests\UpdateGuildRequest;
+use App\Repositories\GuildRepositoryInterface;
 
-class PlayerController extends Controller
+class GuildController extends Controller
 {
-    private PlayerRepositoryInterface $playerRepository;
+    private GuildRepositoryInterface $playerRepository;
 
-    public function __construct(PlayerRepositoryInterface $playerRepository)
+    public function __construct(GuildRepositoryInterface $playerRepository)
     {
         $this->playerRepository = $playerRepository;
     }
@@ -28,7 +28,7 @@ class PlayerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePlayerRequest $request)
+    public function store(StoreGuildRequest $request)
     {
         $player = $this->playerRepository->create($request->validated());
         return response()->json($player, 201);
@@ -37,7 +37,7 @@ class PlayerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Player $player)
+    public function show(Guild $player)
     {
         return response()->json($player);
     }
@@ -45,7 +45,7 @@ class PlayerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePlayerRequest $request, Player $player)
+    public function update(UpdateGuildRequest $request, Guild $player)
     {
         $updated = $this->playerRepository->update($player->id, $request->validated());
         if (!$updated) {
@@ -57,7 +57,7 @@ class PlayerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Player $player)
+    public function destroy(Guild $player)
     {
         $deleted = $this->playerRepository->delete($player->id);
         if (!$deleted) {

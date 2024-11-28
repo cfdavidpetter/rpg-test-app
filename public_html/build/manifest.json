@@ -1,0 +1,138 @@
+{
+  "_ModalPlayer-7r3ilZ06.js": {
+    "file": "assets/ModalPlayer-7r3ilZ06.js",
+    "name": "ModalPlayer",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_ModalPlayer-BQlLEbnK.js": {
+    "file": "assets/ModalPlayer-BQlLEbnK.js",
+    "name": "ModalPlayer",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_ModalPlayer-vFztDWDT.js": {
+    "file": "assets/ModalPlayer-vFztDWDT.js",
+    "name": "ModalPlayer",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-5hzYHaYh.js": {
+    "file": "assets/formField-5hzYHaYh.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-8hM2IJZP.js": {
+    "file": "assets/formField-8hM2IJZP.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-B4wbDjyl.js": {
+    "file": "assets/formField-B4wbDjyl.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-BVYDwKMh.js": {
+    "file": "assets/formField-BVYDwKMh.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-C3O0ZBkB.js": {
+    "file": "assets/formField-C3O0ZBkB.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-CIc7A-xc.js": {
+    "file": "assets/formField-CIc7A-xc.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-DUYdm_q2.js": {
+    "file": "assets/formField-DUYdm_q2.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-DZPvIDNV.js": {
+    "file": "assets/formField-DZPvIDNV.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-Z4gYoiN5.js": {
+    "file": "assets/formField-Z4gYoiN5.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "_formField-wLjTLyd5.js": {
+    "file": "assets/formField-wLjTLyd5.js",
+    "name": "formField",
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "resources/ts/index.tsx": {
+    "file": "assets/index-B3AyiCqv.js",
+    "name": "index",
+    "src": "resources/ts/index.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/ts/pages/Home.tsx",
+      "resources/ts/pages/Players.tsx",
+      "resources/ts/pages/Guilds.tsx"
+    ]
+  },
+  "resources/ts/pages/Guilds.tsx": {
+    "file": "assets/Guilds-Ch20kIzl.js",
+    "name": "Guilds",
+    "src": "resources/ts/pages/Guilds.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/ts/index.tsx",
+      "_formField-Z4gYoiN5.js"
+    ]
+  },
+  "resources/ts/pages/Home.tsx": {
+    "file": "assets/Home-Co4vRhpw.js",
+    "name": "Home",
+    "src": "resources/ts/pages/Home.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/ts/index.tsx"
+    ]
+  },
+  "resources/ts/pages/Players.tsx": {
+    "file": "assets/Players-5WMD4N9A.js",
+    "name": "Players",
+    "src": "resources/ts/pages/Players.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/ts/index.tsx",
+      "_formField-Z4gYoiN5.js"
+    ]
+  },
+  "resources/ts/styles/app.scss": {
+    "file": "assets/app-C2VNL2gk.css",
+    "src": "resources/ts/styles/app.scss",
+    "isEntry": true
+  }
+}

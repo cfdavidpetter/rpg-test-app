@@ -15,10 +15,16 @@ class Player extends Model
         'name', 
         'class', 
         'xp', 
-        'confirmed'
+        'confirmed',
+        'guild_id',
     ];
 
     protected $casts = [
         'class' => PlayerClass::class,
     ];
+
+    public function guild()
+    {
+        return $this->belongsTo(Guild::class);
+    }
 }

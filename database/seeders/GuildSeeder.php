@@ -3,15 +3,15 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Player;
+use App\Models\Guild;
 
-class PlayerSeeder extends Seeder
+class GuildSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Player::factory()->create();
+        Guild::factory()->create();
     }
 }
