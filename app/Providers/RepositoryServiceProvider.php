@@ -9,6 +9,8 @@ use App\Repositories\PlayerRepository;
 use App\Repositories\PlayerRepositoryInterface;
 use App\Repositories\GuildRepository;
 use App\Repositories\GuildRepositoryInterface;
+use App\Repositories\GameSessionRepository;
+use App\Repositories\GameSessionRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -20,6 +22,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(BaseRepositoryInterface::class, BaseRepository::class);
         $this->app->bind(PlayerRepositoryInterface::class, PlayerRepository::class);
         $this->app->bind(GuildRepositoryInterface::class, GuildRepository::class);
+        $this->app->bind(GameSessionRepositoryInterface::class, GameSessionRepository::class);
     }
 
     /**

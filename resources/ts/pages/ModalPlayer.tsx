@@ -1,11 +1,13 @@
 import Swal from 'sweetalert2'
-import { SetStateAction, useEffect, useRef, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import withReactContent from "sweetalert2-react-content";
 
+import { playerClass } from '@/core/constants/sys';
 import { IPlayer } from "@/core/models/player.mode";
 import { PlayerService } from '@/core/services/player.service';
 import FormField from '@/shared/ui/formField';
+import FormSelectField from '@/shared/ui/formSelectField';
 
 const playerService = new PlayerService();
 
@@ -32,8 +34,6 @@ const ModalPlayer: React.FC<Props>  = ({ setOpenModal, player }) => {
   const [errors, setErrors] = useState<ErrorState>({});
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-
-  const addressInputRef = useRef<HTMLInputElement | null>(null);
 
   const {
     reset,
@@ -153,14 +153,16 @@ const ModalPlayer: React.FC<Props>  = ({ setOpenModal, player }) => {
                     placeholder=""
                   />
 
-                  <FormField
+                  <FormSelectField
                     name="class"
                     label="Classe"
-                    type="text"
+                    options={Object.entries(playerClass).map(([_key, value]) => {
+                      return { value, label: value };
+                    })}
                     register={register}
                     error={errors.class}
                     required={true}
-                    placeholder=""
+                    placeholder="Selecione uma opção"
                   />
 
                   <FormField

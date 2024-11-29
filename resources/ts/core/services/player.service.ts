@@ -4,9 +4,9 @@ import { PaginatedResponse } from "../models/sys.mode";
 import { IPlayer } from "../models/player.mode";
 
 export class PlayerService {
-  list(): Promise<PaginatedResponse<IPlayer>> {
+  list(page: string = '1'): Promise<PaginatedResponse<IPlayer>> {
     return requests
-      .get(`${apiEndpoint.Players}`)
+      .get(`${apiEndpoint.Players}?&page=${page}`)
       .then((r: any) => {
         return r;
       });
